@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ledgerline – Online Banking Analysis</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="login">
+ <form class="lbox" id="lf">
+  <h1>Ledgerline</h1><p>Sign in to view your accounts and transactions.</p>
+  <label>User name<input id="u" autocomplete="username" required></label>
+  <label>Password<input id="p" type="password" autocomplete="current-password" required></label>
+  <p class="err" id="err" role="alert"></p>
+  <button class="pri" style="width:100%">Sign in</button>
+  <p class="hint">Demo account: user name <b>admin</b>, password <b>bank123</b>. This sign-in is a demo and does not protect real data.</p>
+ </form>
+</div>
+<div id="app" hidden>
+ <nav id="nav"><div class="brand">Ledgerline</div>
+  <a href="#dashboard" data-p="dashboard">Dashboard</a><a href="#income" data-p="income">Income</a><a href="#expenses" data-p="expenses">Expenses</a><a href="#transactions" data-p="transactions">All transactions</a><a href="#date" data-p="date">Date-wise</a>
+ </nav>
+ <main>
+  <div class="top"><div><h1 id="title"></h1><div class="sm" id="clock"></div></div>
+   <div class="ctl"><span class="live" id="live"><span class="dot"></span><span id="lt">Live</span></span>
+    <button id="pause">Pause updates</button><label class="sm">Month <select id="month"></select></label>
+    <span class="sm" id="who"></span><button id="out">Sign out</button></div></div>
+  <div id="view"></div>
+ </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
